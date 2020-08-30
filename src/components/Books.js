@@ -1,24 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-// AXIOS
-import axios from "axios";
+// COMPONENTS
+import BooksSearch from "./BooksSearch";
+
+// CSS
+import "../css/books.css";
 
 function Books() {
-  const [booksData, setBooksData] = useState();
-
-  useEffect(() => {
-    const fetchBooks = async () => {
-      const response = await axios.get(
-        `https://www.googleapis.com/books/v1/volumes?q=search+terms`
-      );
-      console.log(response);
-      setBooksData(response);
-    };
-
-    fetchBooks();
-  }, []);
-
-  return <div>Books Component</div>;
+  return (
+    <div className="books-section">
+      <BooksSearch />
+    </div>
+  );
 }
 
 export default Books;

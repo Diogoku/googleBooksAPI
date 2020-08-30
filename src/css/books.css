@@ -1,0 +1,40 @@
+.books-section {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 3rem;
+}
+
+/******** SEARCH BOOK SECTION ********/
+
+.search-book-form {
+  border-radius: 5px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.5rem;
+  box-shadow: 0 0 1px 1px rgb(197, 197, 197);
+}
+
+.search-book-label {
+  display: block;
+}
+
+.search-book-input {
+  border-radius: 5px;
+  border: 1px solid var(--mainBlueColor);
+  outline-color: var(--mainBlueColor);
+  padding: 0.2rem;
+  text-align: center;
+}
+
+.search-books-submit {
+  border-radius: 5px;
+  border: none;
+  width: 100px;
+  padding: 0.2rem 0.5rem;
+  background-color: var(--mainBlueColor);
+  color: var(--mainWhiteColor);
+}
