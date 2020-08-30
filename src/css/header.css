@@ -1,0 +1,7 @@
+.header-section {
+  overflow: auto;
+  background-color: var(--mainBlueColor);
+  color: var(--mainWhiteColor);
+  display: flex;
+  justify-content: center;
+}

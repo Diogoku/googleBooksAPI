@@ -1,6 +1,12 @@
 :root {
   font-family: "Poppins", sans-serif;
-  --mainBlackColor: #0e0b0b;
+  --mainBlackColor: #333333;
   --mainBlueColor: #4380ee;
   --mainWhiteColor: #f7f7f7;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
