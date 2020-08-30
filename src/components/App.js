@@ -6,6 +6,7 @@ import store from "../store";
 
 // COMPONENTS
 import Header from "./Header";
+import Books from "./Books";
 
 // CSS
 import "../css/default.css";
@@ -17,7 +18,7 @@ function App() {
   return (
     <Provider store={store}>
       <Header />
-      GOOGLE BOOKS API
+      <Books />
     </Provider>
   );
 }
