@@ -1,5 +1,8 @@
 import React from "react";
 
+// REACT-ROUTER-DOM
+import { Link } from "react-router-dom";
+
 // CSS
 import "../css/header.css";
 
@@ -9,9 +12,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Header() {
   return (
     <div className="header-section">
-      <h2>
-        Google Books API <FontAwesomeIcon icon="book" />
-      </h2>
+      <Link to="/" className="Link">
+        <h2 className="header-title">
+          Google Books <FontAwesomeIcon icon="book" />
+        </h2>
+      </Link>
     </div>
   );
 }

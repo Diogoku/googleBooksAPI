@@ -1,7 +1,12 @@
 .header-section {
   overflow: auto;
   background-color: var(--mainBlueColor);
-  color: var(--mainWhiteColor);
   display: flex;
   justify-content: center;
+}
+
+.header-title {
+  word-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
+  color: var(--mainWhiteColor);
 }
