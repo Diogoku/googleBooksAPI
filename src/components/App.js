@@ -10,6 +10,9 @@ import Header from "./Header";
 // CSS
 import "../css/default.css";
 
+// FONT AWESOME ICONS
+import "../FontAwesomeIcons";
+
 function App() {
   return (
     <Provider store={store}>
