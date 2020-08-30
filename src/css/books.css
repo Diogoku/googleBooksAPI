@@ -1,9 +1,9 @@
 .books-section {
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1.5rem 3rem;
+  row-gap: 1rem;
 }
 
 /******** SEARCH BOOK SECTION ********/
@@ -15,7 +15,7 @@
   flex-direction: column;
   align-items: center;
   row-gap: 0.5rem;
-  box-shadow: 0 0 1px 1px rgb(197, 197, 197);
+  box-shadow: 0 0 1px 1px var(--secundaryWhiteColor);
 }
 
 .search-book-label {
@@ -37,4 +37,47 @@
   padding: 0.2rem 0.5rem;
   background-color: var(--mainBlueColor);
   color: var(--mainWhiteColor);
+}
+
+/******** BOOKS LIST SECTION ********/
+
+.books-list-section {
+  border-top: 1px solid var(--secundaryWhiteColor);
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/******** BOOKS CARD ********/
+
+.book-card {
+  padding: 0 0.5rem;
+  width: 250px;
+  box-shadow: 0 0 1px 1px var(--secundaryWhiteColor);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  row-gap: 0.6rem;
+}
+
+.book-card-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.book-card-description {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.body-card-description-less {
+  color: var(--secundaryGreyColor);
 }
