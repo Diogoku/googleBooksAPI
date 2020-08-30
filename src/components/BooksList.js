@@ -17,6 +17,7 @@ function BooksList({ books }) {
             title={book.volumeInfo.title}
             author={book.volumeInfo.authors}
             published={book.volumeInfo.publishedDate}
+            bookId={book.id}
           />
         );
       })}

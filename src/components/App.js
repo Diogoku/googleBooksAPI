@@ -4,9 +4,13 @@ import React from "react";
 import { Provider } from "react-redux";
 import store from "../store";
 
+// REACT-ROUTER-DOM
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 // COMPONENTS
 import Header from "./Header";
 import Books from "./Books";
+import BookDetail from "./BookDetail";
 
 // CSS
 import "../css/default.css";
@@ -17,8 +21,17 @@ import "../FontAwesomeIcons";
 function App() {
   return (
     <Provider store={store}>
-      <Header />
-      <Books />
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <Books />
+          </Route>
+          <Route path="/:bookId">
+            <BookDetail />
+          </Route>
+        </Switch>
+      </Router>
     </Provider>
   );
 }
