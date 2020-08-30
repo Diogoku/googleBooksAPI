@@ -4,8 +4,16 @@ import React from "react";
 import { Provider } from "react-redux";
 import store from "../store";
 
+// COMPONENTS
+import Header from "./Header";
+
 function App() {
-  return <Provider store={store}>GOOGLE BOOKS API</Provider>;
+  return (
+    <Provider store={store}>
+      <Header />
+      GOOGLE BOOKS API
+    </Provider>
+  );
 }
 
 export default App;
