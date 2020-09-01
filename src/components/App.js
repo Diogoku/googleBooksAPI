@@ -24,10 +24,10 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/googleBooksAPI/">
             <Books />
           </Route>
-          <Route exact path="/:bookId">
+          <Route path="/googleBooksAPI/:bookId">
             <BookDetail />
           </Route>
         </Switch>

@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Header() {
   return (
     <div className="header-section">
-      <Link to="/" className="Link">
+      <Link to="googleBooksAPI/" className="Link">
         <h2 className="header-title">
           Google Books <FontAwesomeIcon icon="book" />
         </h2>
