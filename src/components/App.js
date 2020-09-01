@@ -18,12 +18,6 @@ import "../css/default.css";
 // FONT AWESOME ICONS
 import "../FontAwesomeIcons";
 
-/*
-          <Route exact path="/:bookId">
-            <BookDetail />
-          </Route>
-*/
-
 function App() {
   return (
     <Provider store={store}>
@@ -32,6 +26,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Books />
+          </Route>
+          <Route exact path="/:bookId">
+            <BookDetail />
           </Route>
         </Switch>
       </Router>
