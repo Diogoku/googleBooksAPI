@@ -4,7 +4,6 @@ import React from "react";
 import BookCard from "./BookCard";
 
 function BooksList({ books }) {
-  console.log(books, "books list");
   return (
     <div className="books-list-section">
       {books
