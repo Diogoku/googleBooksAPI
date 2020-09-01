@@ -27,3 +27,7 @@ p {
 .Link {
   text-decoration: none;
 }
+
+.uppercase {
+  text-transform: uppercase;
+}

@@ -3,6 +3,7 @@
   background-color: var(--mainBlueColor);
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .header-title {
