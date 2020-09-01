@@ -17,7 +17,7 @@ function BookDetail() {
   let history = useHistory();
 
   const { booksData } = useSelector((state) => state.booksReducer);
-
+  console.log("ola", booksData);
   if (!booksData) return null;
 
   const detailBookData = booksData.filter((book) => book.id == bookId)[0];
