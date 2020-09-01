@@ -15,7 +15,7 @@ function BookCard(props) {
       transition={{ duration: 0.5 }}
       animate={{ opacity: 1 }}
     >
-      <Link to={`/${props.bookId}`} className="book-card Link">
+      <Link to={`/googleBooksAPI/${props.bookId}`} className="book-card Link">
         <img src={props.image} alt="" className="book-card-image" />
         <div className="book-card-description">
           <p className="body-card-title">{props.title}</p>
