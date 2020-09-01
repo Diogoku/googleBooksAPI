@@ -18,10 +18,9 @@ function BookDetail() {
 
   const { booksData } = useSelector((state) => state.booksReducer);
 
-  if (booksData) {
-    const detailBookData = booksData.filter((book) => book.id == bookId)[0];
-  }
+  if (!booksData) return null;
 
+  const detailBookData = booksData.filter((book) => book.id == bookId)[0];
   return (
     <div className="detail-book-section">
       <div className="detail-book-container">
