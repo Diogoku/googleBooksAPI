@@ -186,7 +186,9 @@
     align-items: center;
   }
 
-  .book-details-buttons-wrapper {
-    flex-direction: column;
+  .book-main-details-extension {
+    align-items: center;
+    text-align: center;
+    row-gap: 0.5rem;
   }
 }

@@ -9,6 +9,9 @@ import { useParams, useHistory } from "react-router-dom";
 // REACT STAR-RATING
 import StarRatings from "react-star-ratings";
 
+// FRAMER MOTION
+import { motion } from "framer-motion";
+
 function BookDetail() {
   let { bookId } = useParams();
   let history = useHistory();
@@ -16,18 +19,24 @@ function BookDetail() {
   const { booksData } = useSelector((state) => state.booksReducer);
 
   const detailBookData = booksData.filter((book) => book.id == bookId)[0];
-  console.log(detailBookData, "detalhado");
   return (
     <div className="detail-book-section">
       <div className="detail-book-container">
-        <div className="book-main-details">
+        <motion.div
+          className="book-main-details"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           <div>
             <img src={detailBookData.volumeInfo.imageLinks.thumbnail} alt="" />
           </div>
           <div className="book-main-details-extension">
             <p className="book-title">
-              {detailBookData.volumeInfo.title}:{" "}
-              {detailBookData.volumeInfo.subtitle}
+              {detailBookData.volumeInfo.title}
+              {detailBookData.volumeInfo.subtitle
+                ? ": " + detailBookData.volumeInfo.subtitle
+                : null}
             </p>
             {detailBookData.volumeInfo.authors
               ? detailBookData.volumeInfo.authors.map((author) => {
@@ -60,32 +69,48 @@ function BookDetail() {
             />
             <div className="book-details-buttons-wrapper">
               {detailBookData.saleInfo.saleability == "FOR_SALE" ? (
-                <button className="detail-book-buttons">
+                <motion.button
+                  className="detail-book-buttons"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.9 }}
+                >
                   {detailBookData.saleInfo.listPrice.amount}{" "}
                   {detailBookData.saleInfo.listPrice.currencyCode}
-                </button>
+                </motion.button>
               ) : null}
               {detailBookData.volumeInfo.previewLink ? (
-                <a
+                <motion.a
                   href={detailBookData.volumeInfo.previewLink}
                   className="detail-book-buttons"
                   target="_blank"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.9 }}
                 >
                   Preview
-                </a>
+                </motion.a>
               ) : null}
 
-              <button onClick={history.goBack} className="detail-book-buttons">
+              <motion.button
+                onClick={history.goBack}
+                className="detail-book-buttons"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.9 }}
+              >
                 Go Back
-              </button>
+              </motion.button>
             </div>
           </div>
-        </div>
-        <div className="book-description">
+        </motion.div>
+        <motion.div
+          className="book-description"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           <p className="book-description-text">
             {detailBookData.volumeInfo.description}
           </p>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
